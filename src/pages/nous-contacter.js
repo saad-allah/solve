@@ -1,8 +1,6 @@
-import Layout from "../components/layout"
 import React, { useState }  from "react"
+import Layout from "../components/layout"
 import axios from "axios";
-
-
 const MyForm = () => {
     
     const [serverState, setServerState] = useState({

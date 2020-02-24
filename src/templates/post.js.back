@@ -1,0 +1,46 @@
+import React from "react"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import { graphql } from "gatsby"
+
+export default ({ data }) => {
+  const post = data.allWordpressPost.edges[0].node
+  console.log(post)
+  return (
+    <Layout>
+      <div>
+      <SEO title={post.title} description={post.excerpt} />
+        <h1>{post.title}</h1>
+          <h2>Categories : {post.categories[0].name}</h2>
+
+        <p>
+          Written by {post.author.name} on {post.date}
+        </p>
+        
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </div>
+    </Layout>
+  )
+}
+export const query = graphql`
+  query($slug: String!) {
+    allWordpressPost(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          title
+          content
+          author {
+               name
+               slug
+               link
+            }
+          categories {
+              slug
+              name
+          }
+           date(formatString: "YYYY MMMM DD")
+        }
+      }
+    }
+  }
+`

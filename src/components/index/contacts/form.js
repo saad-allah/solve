@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Forms = () => (
+const FormsContact = () => (
   <div>
     <form
       name="contact-form"
@@ -17,4 +17,4 @@ const Forms = () => (
   </div>
 )
 
-export default Forms
+export default FormsContact

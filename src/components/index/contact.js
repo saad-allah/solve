@@ -2,7 +2,7 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import InoContact from "./contacts/info";
-import FormContact from "./contacts/form";
+import FormsContact from "./contacts/form";
 
 const ContactIndex = () => (
   <StaticQuery
@@ -25,9 +25,11 @@ const ContactIndex = () => (
             <div className="se_contact_excerpt row justify-content-center has-ovlay ">
               <div className="bg-ovelay"></div>
               <div className="col-6 ">
+              <FormsContact />
+              alert
               </div>
               <InoContact />
-              <FormContact />
+             
          
             </div>
           </div>

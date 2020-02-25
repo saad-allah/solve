@@ -24,13 +24,8 @@ const ContactIndex = () => (
           <div className="col-12 ">
             <div className="se_contact_excerpt row justify-content-center has-ovlay ">
               <div className="bg-ovelay"></div>
-              <div className="col-6 ">
               <FormsContact />
-              alert
-              </div>
               <InoContact />
-             
-         
             </div>
           </div>
         </div>

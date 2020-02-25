@@ -2,6 +2,7 @@ import { StaticQuery, graphql } from "gatsby"
 import React from "react"
 
 const Banner = () => (
+  
   <StaticQuery
     query={graphql`
       query {
@@ -24,8 +25,7 @@ const Banner = () => (
     render={data => (
             <section className="se-main-top">
             <div className="se-banner" style={{ backgroundImage: `url(${data.wordpressAcfPages.acf.image_banner.source_url})` }}></div>
-            <div className="se-imgs" style={{ backgroundImage: `url(${data.wordpressAcfPages.acf.man_image.source_url})` }}>
-            </div>
+            <div className="se-imgs" style={{ backgroundImage: `url(${data.wordpressAcfPages.acf.man_image.source_url})` }}></div>
             <div className="container">
               <div className="row">
                 <div className="col-sm-12 col-lg-8 " >

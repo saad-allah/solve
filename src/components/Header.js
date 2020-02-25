@@ -1,5 +1,6 @@
-import { StaticQuery, graphql, Link } from "gatsby"
-import React from "react"
+import { StaticQuery, graphql, Link } from "gatsby";
+import React from "react";
+//import Img from "gatsby-image";
 
 const Header = () => (
   <StaticQuery
@@ -14,38 +15,63 @@ const Header = () => (
             object_slug
           }
         }
+        wordpressAcfOptions {
+          options {
+            lang
+            image_lang {
+              alt_text
+              source_url
+            }
+            logo_header {
+              source_url
+              alt_text
+            }
+          }
+        }
       }
     `}
     render={data => (
-      <header style={{ background: `rebeccapurple` }} >
-        <div style={{ margin: `0 auto`, maxWidth: 960, padding: `1.45rem 1.0875rem`, display: `flex`, justifyContent: `space-between`, alignItems: `center`, }} >
-          <h1 style={{ margin: 0 }}>
-            <Link to="/" style={{ color: `white`, textDecoration: `none`, }} >
-              {data.wordpressSiteMetadata.name}
-            </Link>
-          </h1>
-          <ul style={{ listStyle: `none`, display: `flex`, margin: 0 }}>
-            <li key='Accueil' style={{ margin: `0 10px` }}>
-              <Link to='/' style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} >
-                Accueil
+      <header className="nav">
+        <div className="nav__holder nav--sticky">
+          <nav className="navbar navbar-expand-lg" id="se-navbar">
+            <div className="container">
+              <Link to="/" className="logo navbar-brand">
+              <img src={ data.wordpressAcfOptions.options.logo_header.source_url} alt={ data.wordpressAcfOptions.options.logo_header.alt_text} />     
               </Link>
-            </li>
-            {data.wordpressWpApiMenusMenusItems.items.map(item => (
-              <li key={item.object_slug} style={{ margin: `0 10px` }}>
-                <Link to={`/${item.object_slug}`} style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-            <li key='blog' style={{ margin: `0 10px` }}>
-            <Link to='/blog' style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} >
-              Blog
-            </Link>
-            </li>
-          </ul>
+              <button
+                className="nav-icon-toggle navbar-toggler"
+                data-toggle="collapse"
+                data-target="#se-nav"
+                aria-controls="se-nav"
+                aria-expanded="true"
+                aria-label="Toggle navigation"
+              >
+                <span className="nav-icon-toggle__box">
+                  <span className="nav-icon-toggle__inner"></span>
+                </span>
+              </button>
+
+              <div className="navbar-collapse collapse show" id="se-nav">
+                <ul className="navbar-nav ml-auto mt-0">
+                  <li key="accueil" className="nav-item">
+                    <Link to="/" className="nav-link">
+                      Accueil
+                    </Link>
+                  </li>
+                  {data.wordpressWpApiMenusMenusItems.items.map(item => (
+                    <li key={item.object_slug} className="nav-item ">
+                      <Link to={`/${item.object_slug}`} className="nav-link">
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
       </header>
     )}
   />
-)
-export default Header
+);
+export default Header;

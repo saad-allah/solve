@@ -16,13 +16,15 @@ const TitleExp = () => (
 
     render={data => (
       
-      <div class="col-sm-12 p0 col-lg-10">
-      <div class="se-exp_header" >
-        <h2 class="se_exp_title">
+      <div className="col-sm-12 p0 col-lg-10">
+      <div className="se-exp_header" >
+        <h2 className="se_exp_title">
         { data.wordpressAcfPages.acf.title_expertises}
         </h2>
-        <div class="se_exp_excerpt" >
+        <div className="se_exp_excerpt" >
+        <p>
         { data.wordpressAcfPages.acf.paragraphe_expertises}
+        </p>
         </div>
       </div>
     </div>

@@ -4,6 +4,9 @@ import Layout from "../components/layout"
 import Banner from "../components/index/banner"
 import QuiSommeNous from "../components/index/quiSommeNous"
 import NosExpertises from "../components/index/nosExpertises"
+import ExperienceInternationale from "../components/index/experienceInternationale"
+import LogoClients from "../components/index/client"
+import Contact from "../components/index/contact"
 import SEO from "../components/seo"
 
 export default ({ data }) => {
@@ -13,6 +16,10 @@ export default ({ data }) => {
       <Banner />
       <QuiSommeNous />
       <NosExpertises />
+      <ExperienceInternationale />
+      <LogoClients />
+      <Contact />
+
     </Layout>
   )
 }

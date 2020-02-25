@@ -6,17 +6,17 @@ const FormsContact = () => (
     <div className="card hasbg-ovelay ">
       <h2 className="se_contact_title ">Laisser un message</h2>
       <form
-        className="contact-form "
-        name="contact"
+        className="contact-form"
+        name="contact-form"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
         <div className="contact-name">
-          <input name="name"  type="text" placeholder="Nom Complet" />
+          <input name="name" id="name" type="text" placeholder="Nom Complet" />
         </div>
         <div className="contact-email">
-          <input name="email"  type="email" placeholder="Email" />
+          <input name="email" id="email" type="email" placeholder="Email" />
         </div>
         <div className="contact-sujet">
           <select className="custom-select" name="departement" id="departement">
@@ -33,6 +33,7 @@ const FormsContact = () => (
         </div>
         <div className="contact-message">
           <textarea
+            id="message"
             name="message"
             rows="4"
             required="required"
@@ -40,7 +41,7 @@ const FormsContact = () => (
           ></textarea>
         </div>
         <div className="text-right">
-          <button name="button" className="send">
+          <button  className="send">
             Envoyer
           </button>
         </div>

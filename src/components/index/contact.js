@@ -26,6 +26,8 @@ const ContactIndex = () => (
               <div className="bg-ovelay"></div>
               <FormsContact />
               <InoContact />
+             
+         
             </div>
           </div>
         </div>

@@ -28,16 +28,8 @@ exports.createPages=({actions,graphql})=>{
             result.errors.forEach(e => console.error(e.toString()))
             return Promise.reject(result.errors)
         }
-        const AllPostsTemplate= path.resolve('./src/templates/AllPosts.js')
+  
         const postTemplate = path.resolve(`./src/templates/post.js`)
-        createPage({
-            path:'/blog',
-            component:AllPostsTemplate,
-            context:{
-                allData:result.data.allWordpressPost.edges
-            }
-        })
-
         const allPosts = result.data.allWordpressPost.edges
 
         allPosts.forEach(element=>{

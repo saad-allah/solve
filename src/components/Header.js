@@ -37,6 +37,11 @@ const Header = () => (
                 </Link>
               </li>
             ))}
+            <li key='blog' style={{ margin: `0 10px` }}>
+            <Link to='/blog' style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} >
+              Blog
+            </Link>
+            </li>
           </ul>
         </div>
       </header>

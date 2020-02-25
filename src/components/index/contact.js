@@ -2,6 +2,7 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import InoContact from "./contacts/info";
+import FormContact from "./contacts/form";
 
 const ContactIndex = () => (
   <StaticQuery
@@ -26,6 +27,7 @@ const ContactIndex = () => (
               <div className="col-6 ">
               </div>
               <InoContact />
+              <FormContact />
          
             </div>
           </div>

@@ -27,7 +27,7 @@ const TitleNosvaleur = () => (
                   {data.wordpressAcfPages.acf.title_valeurs}
               </h2>
               <div className="se-video" >
-                <video muted autoplay>
+                <video autoPlay muted>
                   <source src={data.wordpressAcfPages.acf.video_valeurs.source_url} type="video/mp4"/>
                   Your browser does not support HTML5 video.
                 </video>

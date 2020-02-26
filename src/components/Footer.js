@@ -26,25 +26,25 @@ const Footer = () => (
             <div className="col-12  col-md-4">
               <div className="logofooter">
                 <Link to="/" className="se-logo">
-                <img className="se__img " src={ data.wordpressAcfOptions.options.logo_footer.source_url} alt={ data.wordpressAcfOptions.options.logo_footer.alt_text} />     
-          
+                <img className="se__img " src={ data.wordpressAcfOptions.options.logo_footer.source_url} alt={ data.wordpressAcfOptions.options.logo_footer.alt_text} />
+
                 </Link>
               </div>
             </div>
             <div className="col-12  col-md-4">
               <div className="cpy">
                 <p>
-                <Link to=" { data.wordpressAcfOptions.options.link_page}" className="nav-link ">
+                <Link to="/politique-de-confidentialite" className="nav-link ">
                 { data.wordpressAcfOptions.options.Link_Text}
                 </Link>
                 </p>
               </div>
             </div>
             <div className="col-12  col-md-4">
-       
-              
+
+
              <div className="left-text" dangerouslySetInnerHTML={{ __html: data.wordpressAcfOptions.options.copyright}}/>
-             
+
             </div>
           </div>
         </div>

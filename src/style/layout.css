@@ -1872,7 +1872,15 @@ position: relative;
 .se-Partenaires_header {
   padding: 20px;
 }
-
+.smt{
+  background-color: #dbdbdb;
+      width: 30px;
+      padding: 5px;
+      border-radius: 100%;
+}
+.info-social.has-color .smt{
+    background-color: #c0181f;
+}
 .se_Partenaires_title {
   font-family: 'Rubik';
   font-weight: bold;
@@ -2908,7 +2916,7 @@ box-shadow: 0 14.6px 17.8px rgba(229, 242, 251, 0.25), 0 0px 92px rgba(142, 151,
 
 @media (min-width:1024px) {
   .contact-page>li {
-    display: inline-block;
+    display: inline-flex !important;
     width: 33%;
     vertical-align: top;
   }

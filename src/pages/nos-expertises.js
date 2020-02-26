@@ -1,15 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import Banner from "../components/expertises/banner"
+import Expertise from "../components/expertises/expertise"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const NosExpertises = () => (
   <Layout>
     <SEO title="Page two" />
-    <h1>Hi from the NosExpertises page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+  <Banner />
+    <Expertise />
   </Layout>
 )
 

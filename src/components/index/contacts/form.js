@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 
 const FormsContact = () => (
   <div className="col-12 col-lg-6 ">
@@ -20,7 +19,7 @@ const FormsContact = () => (
         </div>
         <div className="contact-sujet">
           <select className="custom-select" name="departement" id="departement">
-            <option selected="" disabled="">
+            <option >
               Choisir département
             </option>
             <option value="Département Marketing">Département Marketing</option>

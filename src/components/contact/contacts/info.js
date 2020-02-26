@@ -1,12 +1,11 @@
 import { StaticQuery, graphql } from "gatsby";
-import MediaTop from "../../SocialmediaHead"
 import React from "react";
 
 const InoContact = () => (
   <StaticQuery
     query={graphql`
       query {
-        wordpressAcfPages(wordpress_id: { eq: 2 }) {
+        wordpressAcfPages(wordpress_id: { eq: 25 }) {
           acf {
             title_contact
             sub_title
@@ -31,8 +30,8 @@ const InoContact = () => (
       }
     `}
     render={data => (
-      <div className="col-12 col-lg-6">
-        <div className="card right-auto ">
+      <div className="col-12 col-lg-12 hasBgWhite mt-50">
+        <div className="card ">
           <h2 className="se_contact_title">
           { data.wordpressAcfPages.acf.title_contact}
           </h2>
@@ -42,7 +41,7 @@ const InoContact = () => (
             </p>
           </div>
           <div className="info-contact ">
-            <ul>
+            <ul class="contact-page">
               <li className="ui-map">
               <img src={ data.wordpressAcfPages.acf.icon_address.source_url} alt={ data.wordpressAcfPages.acf.icon_address.alt_text} />
                 <span className="bold">
@@ -62,9 +61,6 @@ const InoContact = () => (
                 </a>
               </li>
             </ul>
-          </div>
-          <div className="info-social">
-  <MediaTop />
           </div>
         </div>
       </div>

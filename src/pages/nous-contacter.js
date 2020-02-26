@@ -1,16 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import Contact from "../components/contact/contact"
+import Banner from "../components/contact/banner"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Test = () => (
+const ConatcPage = () => (
   <Layout>
-    <SEO title="Page NosValeurs" />
-    <h1>Hi from the Nos Valeurs page</h1>
-    <p>Welcome to page Nos Valeurs</p>
-    <Link to="/">Go back to the home page</Link>
+    <SEO title="Page Contact" />
+      <Banner />
+      <Contact />
   </Layout>
 )
 
-export default Test
+export default ConatcPage

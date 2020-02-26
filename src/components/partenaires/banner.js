@@ -6,7 +6,7 @@ const Banner = () => (
   <StaticQuery
     query={graphql`
       query {
-        wordpressAcfPages(wordpress_id: {eq: 43}) {
+        wordpressAcfPages(wordpress_id: {eq: 23}) {
     acf {
       title_banner_page
       image_banner_page {
@@ -19,15 +19,15 @@ const Banner = () => (
     `}
 
     render={data => (
-      <section class="se-main-top se-partenaires">
+      <section className="se-main-top se-partenaires">
       <div className="social-slider">
       <MediaTop />
       </div>
-      <div class="se-banner-single" style={{ backgroundImage: `url(${data.wordpressAcfPages.acf.image_banner_page.source_url})` }}></div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-sm-12 col-lg-6 " >
-            <div class="text-banner-single">
+      <div className="se-banner-single" style={{ backgroundImage: `url(${data.wordpressAcfPages.acf.image_banner_page.source_url})` }}></div>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-sm-12 col-lg-7 " >
+            <div className="text-banner-single">
               <h1   className="title-banner-single" dangerouslySetInnerHTML={{ __html: data.wordpressAcfPages.acf.title_banner_page }} />
             </div>
           </div>

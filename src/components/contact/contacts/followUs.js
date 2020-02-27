@@ -8,7 +8,7 @@ const FollowUs = () => (
         wordpressAcfOptions {
           options {
             title_socialMedia
-   sub_title
+            sub_title
             social_media {
               icon {
                 alt_text
@@ -23,25 +23,29 @@ const FollowUs = () => (
     `}
     render={data => (
       <div className="col-12 col-lg-12">
-                  <div className="followus">
-                    <h2 className="se_contact_title">
-                  { data.wordpressAcfOptions.options.title_socialMedia}
-                    </h2>
-                    <div className="has_excerpt">
-
-                      <p>
-                        { data.wordpressAcfOptions.options.sub_title}
-                      </p>
-                    </div>
-                    <div className="info-social has-color">
-                    <ul>
-                      {data.wordpressAcfOptions.options.social_media.map(item => (
-                      <li  key={item.icon.slug}> <a href={item.url_media}>   <img src={item.icon.source_url} alt={item.icon.alt_text} className="smt"/></a></li>
-                      ))}
-                    </ul>
-                    </div>
-                  </div>
-                </div>
+        <div className="followus">
+          <h2 className="se_contact_title">
+            {data.wordpressAcfOptions.options.title_socialMedia}
+          </h2>
+          <div className="has_excerpt">
+            <p>{data.wordpressAcfOptions.options.sub_title}</p>
+          </div>
+          <div className="info-social has-color">
+            <ul>
+              {data.wordpressAcfOptions.options.social_media.map(item => (
+                <li key={item.icon.slug}>
+                  <a href={item.url_media} className="smt">
+                    <img
+                      src={item.icon.source_url}
+                      alt={item.icon.alt_text}
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     )}
   />
 );

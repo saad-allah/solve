@@ -19,9 +19,7 @@ const FormsContact = () => (
         </div>
         <div className="contact-sujet">
           <select className="custom-select" name="departement" id="departement">
-            <option >
-              Choisir département
-            </option>
+            <option>Choisir département</option>
             <option value="Département Marketing">Département Marketing</option>
             <option value="Département Juridique">Département Juridique</option>
             <option value="Département Finance">Département Finance</option>
@@ -40,9 +38,7 @@ const FormsContact = () => (
           ></textarea>
         </div>
         <div className="text-right">
-          <button  className="send">
-            Envoyer
-          </button>
+          <button className="send">Envoyer</button>
         </div>
       </form>
     </div>

@@ -1,4 +1,3 @@
-
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import Parallax from "./histoire/parallax";
@@ -15,7 +14,7 @@ const Notrehistoire = () => (
       }
     `}
     render={data => (
-      <section >
+      <section>
         <Parallax />
         <Content />
       </section>

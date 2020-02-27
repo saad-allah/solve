@@ -1,4 +1,3 @@
-
 import React from "react";
 import TitleNosvaleur from "./nosvaleurs/title";
 import Bloc1 from "./nosvaleurs/bloc1";
@@ -8,21 +7,21 @@ import Bloc4 from "./nosvaleurs/bloc4";
 import LastBloc from "./nosvaleurs/last";
 
 const NosvaleurPage = () => (
-<div>
-<TitleNosvaleur />
-<section>
+  <div>
+    <TitleNosvaleur />
+    <section>
       <div className="container">
-      <Bloc1 />
+        <Bloc1 />
         <div className="se-space"></div>
-    <Bloc2 />
+        <Bloc2 />
         <div className="se-space"></div>
-<Bloc3 />
+        <Bloc3 />
         <div className="se-space"></div>
-<Bloc4 />
+        <Bloc4 />
         <div className="se-space has30"></div>
-<LastBloc />
+        <LastBloc />
       </div>
     </section>
-</div>
+  </div>
 );
 export default NosvaleurPage;

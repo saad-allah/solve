@@ -14,14 +14,10 @@ const TitleExpInt = () => (
       }
     `}
     render={data => (
-      <div className="se-exp_header aos-init aos-animate">
-        <h2 className="se_map_title">
-        { data.wordpressAcfPages.acf.title_ei}
-        </h2>
+      <div className="se-exp_header">
+        <h2 className="se_map_title">{data.wordpressAcfPages.acf.title_ei}</h2>
         <div className="se_map_excerpt">
-      <p>
-      { data.wordpressAcfPages.acf.paragraphe_ai}
-      </p>
+          <p>{data.wordpressAcfPages.acf.paragraphe_ai}</p>
         </div>
       </div>
     )}

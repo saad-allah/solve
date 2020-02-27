@@ -8,14 +8,15 @@ const MapExp = () => (
         wordpressAcfPages(wordpress_id: { eq: 2 }) {
           acf {
             map
-            }
+          }
         }
       }
     `}
     render={data => (
-
-     <div   className="col-sm-12 p0" dangerouslySetInnerHTML={{ __html: data.wordpressAcfPages.acf.map }} />
-    
+      <div
+        className="col-sm-12 p0"
+        dangerouslySetInnerHTML={{ __html: data.wordpressAcfPages.acf.map }}
+      />
     )}
   />
 );

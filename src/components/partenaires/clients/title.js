@@ -15,17 +15,14 @@ const TitleClients = () => (
     `}
     render={data => (
       <div className="co-sm-12 p0 col-lg-10">
-      <div className="se-Partenaires_header">
-        <h2 className="se_Partenaires_title">
-          {data.wordpressAcfPages.acf.title_clients}
-        </h2>
-        <div className="se_Partenaires_excerpt">
-                <p>
-                {data.wordpressAcfPages.acf.sub_title_partenaires}
-                </p>
-
-              </div>
-      </div>
+        <div className="se-Partenaires_header">
+          <h2 className="se_Partenaires_title">
+            {data.wordpressAcfPages.acf.title_clients}
+          </h2>
+          <div className="se_Partenaires_excerpt">
+            <p>{data.wordpressAcfPages.acf.sub_title_partenaires}</p>
+          </div>
+        </div>
       </div>
     )}
   />

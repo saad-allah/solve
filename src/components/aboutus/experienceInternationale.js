@@ -1,4 +1,3 @@
-
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import TitleExpIn from "./experienceInternationale/title";
@@ -19,7 +18,6 @@ const ExperienceInternationale = () => (
       <section className="no-expertises">
         <div className="container">
           <div className="row justify-content-center">
-          
             <div className=" col-sm-12 p0 col-lg-10">
               <TitleExpIn />
             </div>

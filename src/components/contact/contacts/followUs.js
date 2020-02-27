@@ -34,7 +34,7 @@ const FollowUs = () => (
             <ul>
               {data.wordpressAcfOptions.options.social_media.map(item => (
                 <li key={item.icon.slug}>
-                  <a href={item.url_media} className="smt">
+                  <a href={item.url_media} className="smt" target="_blank" rel="noopener">
                     <img
                       src={item.icon.source_url}
                       alt={item.icon.alt_text}

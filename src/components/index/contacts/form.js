@@ -12,10 +12,14 @@ const FormsContact = () => (
         data-netlify-honeypot="bot-field"
       >
         <div className="contact-name">
+        <label for="name">
           <input name="name" id="name" type="text" placeholder="Nom Complet" />
+          </label>
         </div>
         <div className="contact-email">
+        <label for="email">
           <input name="email" id="email" type="email" placeholder="Email" />
+       </label>
         </div>
         <div className="contact-sujet">
           <select className="custom-select" name="departement" id="departement">

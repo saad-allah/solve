@@ -1,4 +1,5 @@
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React from "react"
 const Footer = () => (
   <StaticQuery
@@ -25,18 +26,18 @@ const Footer = () => (
           <div className="row">
             <div className="col-12  col-md-4">
               <div className="logofooter">
-                <Link to="/" className="se-logo">
+                <AniLink to="/" cover direction="up" duration={1.5} bg="#c0181f" className="se-logo">
                 <img className="se__img " src={ data.wordpressAcfOptions.options.logo_footer.source_url} alt={ data.wordpressAcfOptions.options.logo_footer.alt_text} />
 
-                </Link>
+                </AniLink>
               </div>
             </div>
             <div className="col-12  col-md-4">
               <div className="cpy">
                 <p>
-                <Link to="/politique-de-confidentialite" className="nav-link ">
+                <AniLink cover direction="up" duration={1.5} bg="#c0181f" to="/politique-de-confidentialite" className="nav-link ">
                 { data.wordpressAcfOptions.options.Link_Text}
-                </Link>
+                </AniLink>
                 </p>
               </div>
             </div>

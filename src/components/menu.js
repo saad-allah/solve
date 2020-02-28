@@ -1,6 +1,8 @@
-import { StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import React from "react";
-//import Img from "gatsby-image";
+
 const MenuList = () => (
   <StaticQuery
     query={graphql`
@@ -25,24 +27,24 @@ const MenuList = () => (
     render={data => (
       <ul className="navbar-nav ml-auto mt-0">
         <li key="accueil" className="nav-item">
-          <Link to="/" className="nav-link">
+          <AniLink to="/"   cover direction="up" duration={1.5} bg="#c0181f"  className="nav-link">
             Accueil
-          </Link>
+          </AniLink>
         </li>
         {data.wordpressWpApiMenusMenusItems.items.map(item => (
           <li key={item.object_slug} className="nav-item ">
-            <Link to={`/${item.object_slug}`} className="nav-link">
+            <AniLink cover direction="up" duration={1.5} bg="#c0181f"  to={`/${item.object_slug}`} className="nav-link">
               {item.title}
-            </Link>
+            </AniLink>
           </li>
         ))}
-         <li key="accueil" className="nav-item">
-          <Link to="/" className="nav-link nav-img">
+         <li key="lang" className="nav-item">
+          <AniLink   cover direction="up" duration={1.5} bg="#c0181f" to="/" className="nav-link nav-img">
           <img
           src={data.wordpressAcfOptions.options.image_lang.source_url}
           alt={data.wordpressAcfOptions.options.image_lang.alt_text}
           />
-          </Link>
+          </AniLink>
         </li>
       </ul>
     )}

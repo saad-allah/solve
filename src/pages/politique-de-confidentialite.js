@@ -5,12 +5,21 @@ import Title from "../components/pdc/title"
 import Content from "../components/pdc/content"
 import SEO from "../components/seo"
 
-const Pdc = () => (
-  <Layout>
-    <SEO title="POLITIQUE DE CONFIDENTIALITÉ." />
+
+export default ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <SEO title={data.wordpressPage.yoast_title}  />
     <Title />
     <Content />
   </Layout>
-)
-
-export default Pdc
+  );
+}
+export const pageQuery = graphql`
+  query {
+    wordpressPage(wordpress_id: {eq: 199}) {
+      yoast_title
+    }
+  }
+`;

@@ -5,13 +5,23 @@ import Clients from "../components/partenaires/client";
 import Certification from "../components/partenaires/certification";
 import SEO from "../components/seo";
 
-const NosPartenaires = () => (
-  <Layout>
-    <SEO title="Page Nos Contacter" />
+
+
+export default ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <SEO title={data.wordpressPage.yoast_title}  />
     <Banner />
     <Clients />
     <Certification />
   </Layout>
-);
-
-export default NosPartenaires;
+  );
+}
+export const pageQuery = graphql`
+  query {
+    wordpressPage(wordpress_id: {eq: 23}) {
+      yoast_title
+    }
+  }
+`;

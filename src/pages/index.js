@@ -13,7 +13,7 @@ export default ({ data }) => {
   console.log(data);
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title={data.wordpressPage.yoast_title}  />
       <Banner />
       <QuiSommeNous />
       <NosExpertises />
@@ -33,6 +33,9 @@ export const pageQuery = graphql`
           slug
         }
       }
+    }
+    wordpressPage(wordpress_id: {eq: 2}) {
+      yoast_title
     }
   }
 `;

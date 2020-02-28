@@ -6,14 +6,23 @@ import ExperienceInternationale from "../components/aboutus/experienceInternatio
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const AboutUus = () => (
-  <Layout>
-    <SEO title="about us" />
-    <Banner />
-    <QuiSommeNous />
-    <NotreHistoire />
-    <ExperienceInternationale />
-  </Layout>
-)
 
-export default AboutUus
+export default ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <SEO title={data.wordpressPage.yoast_title}  />
+      <Banner />
+      <QuiSommeNous />
+      <NotreHistoire />
+      <ExperienceInternationale />
+    </Layout>
+  );
+};
+export const pageQuery = graphql`
+  query {
+    wordpressPage(wordpress_id: {eq: 43}) {
+      yoast_title
+    }
+  }
+`;

@@ -4,12 +4,21 @@ import NosvaleurContent from "../components/valeurs/nosvaleur"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NosValeurs = () => (
-  <Layout>
-    <SEO title="Page NosValeurs" />
+
+export default ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <SEO title={data.wordpressPage.yoast_title}  />
     <Banner />
     <NosvaleurContent />
   </Layout>
-)
-
-export default NosValeurs
+  );
+}
+export const pageQuery = graphql`
+  query {
+    wordpressPage(wordpress_id: {eq: 18}) {
+      yoast_title
+    }
+  }
+`;

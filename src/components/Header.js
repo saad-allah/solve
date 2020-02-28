@@ -8,20 +8,19 @@ export default class Header extends React.Component {
     super(props);
 
     this.state = {
-      animate: false
+      open: false
     }
 
-    this.handleClick = this.handleClick.bind(this);
+    this.OpenMenu = this.OpenMenu.bind(this);
   }
 
-  handleClick(e) {
-    // modify the state, this will automatically recall render() below.
+  OpenMenu(e) {
     this.setState((prevState) => {
-      return { animate: !prevState.animate }
+      return { open: !prevState.open }
     });
   }
   render(){
-    let animationClasses = (this.state.animate ? ' open': '');
+    let menuOpen = (this.state.open ? ' open': '');
     return (
              <header className="nav">
                <div className="nav__holder nav--sticky">
@@ -35,13 +34,13 @@ export default class Header extends React.Component {
                        aria-controls="se-nav"
                        aria-expanded="true"
                        aria-label="Toggle navigation"
-                       onClick={this.handleClick}
+                       onClick={this.OpenMenu}
                      >
                        <span className="nav-icon-toggle__box">
                          <span className="nav-icon-toggle__inner"></span>
                        </span>
                      </button>
-                     <div className={`navbar-collapse collapse show ${animationClasses}`} id="se-nav">
+                     <div className={`navbar-collapse collapse show ${menuOpen}`} id="se-nav">
                          <MenuList />
                        </div>
                    </div>

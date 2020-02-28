@@ -9,7 +9,6 @@ const Logo = () => (
 
         wordpressAcfOptions {
           options {
-            lang
             logo_header {
                 source_url
                 alt_text

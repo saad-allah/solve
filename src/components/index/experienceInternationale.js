@@ -4,7 +4,7 @@ import Counts from "./experienceInternationale/count";
 import MapExp from "./experienceInternationale/map";
 
 const ExperienceInternationale = () => (
-  <section className="no-expertises">
+  <section >
     <div className="container">
       <div className="row justify-content-center">
         <div className=" col-sm-12 p0 col-lg-10">

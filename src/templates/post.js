@@ -1,10 +1,10 @@
-import React from "react"
-import SEO from "../components/seo"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import SEO from "../components/seo";
+import Img from "gatsby-image";
+import Layout from "../components/layout";
+import { Link, graphql } from "gatsby";
 const BlogPost = ({ data }) => {
-  const {wordpressPost}= data
+  const { wordpressPost } = data;
   return (
     <Layout>
       <div>
@@ -12,11 +12,15 @@ const BlogPost = ({ data }) => {
         <h1>{wordpressPost.title}</h1>
       </div>
       <div>
-        {
-          wordpressPost.featured_media===null?<h1>No featured media</h1>:<Img fluid={wordpressPost.featured_media.localFile.childImageSharp.fluid}/>
-        }
+        {wordpressPost.featured_media === null ? (
+          <h1>No featured media</h1>
+        ) : (
+          <Img
+            fluid={wordpressPost.featured_media.localFile.childImageSharp.fluid}
+          />
+        )}
         Content:
-        <br/>
+        <br />
         <div>
           <div dangerouslySetInnerHTML={{ __html: wordpressPost.content }} />
         </div>
@@ -25,9 +29,9 @@ const BlogPost = ({ data }) => {
         </div>
       </div>
     </Layout>
-  )
-}
-export default BlogPost
+  );
+};
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -48,4 +52,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -13,7 +13,7 @@ export default ({ data }) => {
   console.log(data);
   return (
     <Layout>
-      <SEO title={data.wordpressPage.yoast_title} description={data.wordpressPage.yoast_json_ld[0].wordpress__graph.description[1]}/>
+      <SEO title={data.wordpressPage.yoast_title} description={data.wordpressPage.yoast_json_ld[0].wordpress__graph[1].description}/>
       <Banner />
       <QuiSommeNous />
       <NosExpertises />

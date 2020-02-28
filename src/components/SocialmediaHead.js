@@ -23,7 +23,7 @@ const SocialmediaHead = () => (
 
           <ul>
             {data.wordpressAcfOptions.options.social_media.map(item => (
-            <li  key={item.icon.slug}> <a href={item.url_media} className="smt">   <img src={item.icon.source_url} alt={item.icon.alt_text} /></a></li>
+            <li  key={item.icon.slug}> <a href={item.url_media} className="smt" aria-label="Follow us">   <img src={item.icon.source_url} alt={item.icon.alt_text} /></a></li>
             ))}
           </ul>
 

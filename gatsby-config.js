@@ -37,6 +37,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        url: `https://gatsby.astro-projects.com/graphql`,
+      },
+    },
+    {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your WordPress source

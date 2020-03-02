@@ -52,7 +52,7 @@ const SimpleSlider = () => (
           </div>
         </div>
         <Helmet>
-          <script src={withPrefix("file.js")} />
+          <script async src={withPrefix("file.js")} />
         </Helmet>
       </div>
     )}

@@ -17,15 +17,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-marketing-platform',
       options: {
-        dataLayer: {
-          gaPropertyId: 'UA-159342285-1',
-        },
         tagmanager: {
           id: 'GTM-PFVC4B6'
         },
-        analytics: {
-          id: 'UA-159342285-1'
-        }
       },
     },
     `gatsby-plugin-transition-link`,

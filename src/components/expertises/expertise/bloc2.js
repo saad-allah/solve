@@ -33,7 +33,6 @@ const Bloc2 = () => (
           <div className="col-12 col-md-6 se-df ">
             <div className="card-exp">
               <h3 className="se-title-exp">
-                {" "}
                 {data.wordpressAcfPages.acf.title_small_2}
               </h3>
               <div className="se_excerpt">

@@ -1,4 +1,4 @@
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql,Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React from "react";
 
@@ -25,9 +25,9 @@ const OffreExpertises = () => (
           <div className="se_excerpt">
             <p>{data.wordpressAcfPages.acf.content_exp_contact}</p>
           </div>
-          <AniLink  cover direction="up" duration={1.5} bg="#c0181f" to="/nous-contacter" className="se-Ncontact">
+          <Link   to="/nous-contacter" className="se-Ncontact">
             {data.wordpressAcfPages.acf.button_text}
-          </AniLink>
+          </Link>
         </div>
       </div>
     )}

@@ -1,7 +1,7 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-
 const QuiSommeNous = () => (
+  
   <StaticQuery
     query={graphql`
       query {
@@ -14,6 +14,7 @@ const QuiSommeNous = () => (
         }
       }
     `}
+    
     render={data => (
       <section className="se-qui-somme">
         <div className="container ">
@@ -33,6 +34,8 @@ const QuiSommeNous = () => (
             </div>
           </div>
         </div>
+        
+  
       </section>
     )}
   />

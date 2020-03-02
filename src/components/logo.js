@@ -1,4 +1,4 @@
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React from "react"
 //import Img from "gatsby-image";
@@ -20,12 +20,12 @@ const Logo = () => (
     `}
     
     render={data => (
-      <AniLink to="/"  cover  bg="#c0181f" className="logo navbar-brand">
+      <Link to="/" className="logo navbar-brand">
         <img
           src={data.wordpressAcfOptions.options.logo_header.source_url}
           alt={data.wordpressAcfOptions.options.logo_header.alt_text}
         />
-      </AniLink>
+      </Link>
    
     )}
   />

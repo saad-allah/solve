@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import { withPrefix, Link } from "gatsby";
+import { withPrefix } from "gatsby";
 
 const SimpleSlider = () => (
   <StaticQuery
@@ -25,8 +25,8 @@ const SimpleSlider = () => (
       <div className="col-12">
         <div className="slider-rotate" id="slider-2">
           <div className="slider-rotate__container">
-          {data.wordpressAcfPages.acf.slider_expertises.map(item => (
-            <div className="slider-rotate__item ">
+          {data.wordpressAcfPages.acf.slider_expertises.map((item, i) => (
+            <div className="slider-rotate__item " key={i}>
               <img
                 src={item.image_slider.source_url}
                 alt={item.image_slider.alt_text}

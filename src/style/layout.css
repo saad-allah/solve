@@ -1313,6 +1313,11 @@ header .flex-parent {
   display: flex;
   align-items: center;
 }
+.se-main-top .se-banner .gatsby-image-wrapper >div,
+.se-main-top .se-banner-single  .gatsby-image-wrapper >div,{
+  min-height: 540px;
+  padding-bottom: 0 !important;
+}
 
 .se-imgs {
   display: none;

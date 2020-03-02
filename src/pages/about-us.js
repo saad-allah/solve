@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby";
 import Banner from "../components/aboutus/banner"
 import QuiSommeNous from "../components/aboutus/quiSommeNous"
 import NotreHistoire from "../components/aboutus/notreHistoire"

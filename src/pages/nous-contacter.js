@@ -1,4 +1,5 @@
 import React from "react"
+import {  graphql } from "gatsby";
 import Contact from "../components/contact/contact"
 import Banner from "../components/contact/banner"
 import Layout from "../components/layout"

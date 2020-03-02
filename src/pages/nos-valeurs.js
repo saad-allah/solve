@@ -1,4 +1,5 @@
 import React from "react"
+import {  graphql } from "gatsby";
 import Banner from "../components/valeurs/banner"
 import NosvaleurContent from "../components/valeurs/nosvaleur"
 import Layout from "../components/layout"

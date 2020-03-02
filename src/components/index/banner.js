@@ -1,5 +1,6 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
+import Img from "gatsby-image";
 import MediaTop from "../SocialmediaHead";
 
 const Banner = () => (
@@ -12,30 +13,50 @@ const Banner = () => (
             image_banner {
               alt_text
               source_url
+              localFile {
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 1000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
             man_image {
               alt_text
               source_url
+              localFile {
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 1000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
           }
         }
+    
       }
     `}
     render={data => (
+      console.log(data),
       <section className="se-main-top">
         <div className="social-slider">
           <MediaTop />
         </div>
         <div
           className="se-banner"
-          style={{
-            backgroundImage: `url(${data.wordpressAcfPages.acf.image_banner.source_url})`
-          }}
-        ></div>
+     
+        >
+           <Img src={data.wordpressAcfPages.acf.image_banner.localFile.childImageSharp.sizes.src}
+                sizes={data.wordpressAcfPages.acf.image_banner.localFile.childImageSharp.sizes} />
+
+        </div>
         <div
           className="se-imgs"
           style={{
-            backgroundImage: `url(${data.wordpressAcfPages.acf.man_image.source_url})`
+            backgroundImage: `url(${data.wordpressAcfPages.acf.man_image.localFile.childImageSharp.sizes.src})`
           }}
         ></div>
         <div className="container">
@@ -52,6 +73,8 @@ const Banner = () => (
             </div>
           </div>
         </div>
+
+             
       </section>
     )}
   />

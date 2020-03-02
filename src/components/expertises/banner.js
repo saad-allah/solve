@@ -1,7 +1,7 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import MediaTop from "../SocialmediaHead";
-
+import Img from "gatsby-image";
 const Banner = () => (
   <StaticQuery
     query={graphql`
@@ -12,6 +12,14 @@ const Banner = () => (
             image_banner_page {
               alt_text
               source_url
+              localFile {
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 1000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
           }
         }
@@ -23,11 +31,10 @@ const Banner = () => (
           <MediaTop />
         </div>
         <div
-          className="se-banner-single"
-          style={{
-            backgroundImage: `url(${data.wordpressAcfPages.acf.image_banner_page.source_url})`
-          }}
-        ></div>
+          className="se-banner-single">
+              <Img src={data.wordpressAcfPages.acf.image_banner_page.localFile.childImageSharp.sizes.src}
+  sizes={data.wordpressAcfPages.acf.image_banner_page.localFile.childImageSharp.sizes} />
+          </div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-sm-12 col-lg-7 ">

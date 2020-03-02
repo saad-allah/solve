@@ -13,13 +13,27 @@ const FormsContact = () => (
         data-netlify-honeypot="bot-field"
       >
         <div className="contact-name">
-          <input name="name" id="name" type="text" placeholder="Nom Complet" />
+        <label>
+        <span className="hide-text">
+        Nom Complet
+                </span>
+          <input name="name"  type="text" placeholder="Nom Complet" />
+          </label>
         </div>
         <div className="contact-email">
-          <input name="email" id="email" type="email" placeholder="Email" />
+        <label>
+        <span className="hide-text">
+        Email
+                </span>
+          <input name="email"  type="email" placeholder="Email" />
+       </label>
         </div>
         <div className="contact-sujet">
-          <select className="custom-select" name="departement" id="departement">
+        <label>
+        <span className="hide-text">
+        Choisir département
+                </span>
+          <select className="custom-select" name="departement" >
             <option>Choisir département</option>
             <option value="Département Marketing">Département Marketing</option>
             <option value="Département Juridique">Département Juridique</option>
@@ -28,16 +42,20 @@ const FormsContact = () => (
               Département Commercial
             </option>
           </select>
+          </label>
         </div>
+      <div>
+      <label className="hide-text" htmlFor="message">Message</label>
         <div className="contact-message">
           <textarea
-            id="message"
             name="message"
-            rows="7"
+            rows="4"
+            id="message"
             required="required"
             placeholder="Message"
           ></textarea>
         </div>
+      </div>
         <div className="text-right">
           <button className="send">Envoyer</button>
         </div>

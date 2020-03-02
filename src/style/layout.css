@@ -41,6 +41,7 @@ h1, h2, h3, h4 {
     url('./Rubik-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -49,6 +50,7 @@ h1, h2, h3, h4 {
     url('./Raleway-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .container {

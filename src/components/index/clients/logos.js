@@ -12,6 +12,14 @@ const LogosClients = () => (
                 alt_text
                 source_url
                 slug
+                localFile {
+                  childImageSharp {
+                    id
+                    sizes(maxWidth: 900) {
+                      ...GatsbyImageSharpSizes
+                    }
+                  }
+                }
               }
             }
           }
@@ -24,7 +32,7 @@ const LogosClients = () => (
           <div className="col-6 col-lg-3 " key={item.logo.slug}>
             <div className="se-clients">
               <img
-                src={item.logo.source_url}
+                src={item.logo.localFile.childImageSharp.sizes.src}
                 alt={item.logo.alt_text}
                 className="se-img-clients"
               />

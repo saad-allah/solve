@@ -12,6 +12,14 @@ const SocialmediaHead = () => (
                 alt_text
                 source_url
                 slug
+                localFile {
+                  childImageSharp {
+                    id
+                    sizes(maxWidth: 1000) {
+                      ...GatsbyImageSharpSizes
+                    }
+                  }
+                }
               }
               url_media
             }
@@ -23,7 +31,7 @@ const SocialmediaHead = () => (
 
           <ul>
             {data.wordpressAcfOptions.options.social_media.map(item => (
-            <li  key={item.icon.slug}> <a href={item.url_media} className="smt">   <img src={item.icon.source_url} alt={item.icon.alt_text} />
+            <li  key={item.icon.slug}> <a href={item.url_media} className="smt">   <img src={item.icon.localFile.childImageSharp.sizes.src} alt={item.icon.alt_text} />
                 <span className="hide-text">
                 {item.icon.slug}
                 </span>

@@ -13,6 +13,14 @@ const SimpleSlider = () => (
               image_slider {
                 source_url
                 alt_text
+                localFile {
+                  childImageSharp {
+                    id
+                    sizes(maxWidth: 1000) {
+                      ...GatsbyImageSharpSizes
+                    }
+                  }
+                }
               }
               title_slider
               paragraphe_slider
@@ -28,7 +36,7 @@ const SimpleSlider = () => (
           {data.wordpressAcfPages.acf.slider_expertises.map((item, i) => (
             <div className="slider-rotate__item " key={i}>
               <img
-                src={item.image_slider.source_url}
+                src={item.image_slider.localFile.childImageSharp.sizes.src}
                 alt={item.image_slider.alt_text}
               />
               <div className="text">

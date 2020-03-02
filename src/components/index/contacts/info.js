@@ -14,17 +14,41 @@ const InoContact = () => (
             icon_address {
               source_url
               alt_text
+              localFile {
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 1000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
             email_contact
             icon_email {
               alt_text
               source_url
+              localFile {
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 1000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
             phone_number
             phone_number_format
             icon_phone {
               alt_text
               source_url
+              localFile {
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 1000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
           }
         }
@@ -43,7 +67,7 @@ const InoContact = () => (
             <ul>
               <li className="ui-map">
                 <img
-                  src={data.wordpressAcfPages.acf.icon_address.source_url}
+                  src={data.wordpressAcfPages.acf.icon_address.localFile.childImageSharp.sizes.src}
                   alt={data.wordpressAcfPages.acf.icon_address.alt_text}
                 />
                 <span className="bold">
@@ -52,7 +76,7 @@ const InoContact = () => (
               </li>
               <li className="ui-phone">
                 <img
-                  src={data.wordpressAcfPages.acf.icon_phone.source_url}
+                  src={data.wordpressAcfPages.acf.icon_phone.localFile.childImageSharp.sizes.src}
                   alt={data.wordpressAcfPages.acf.icon_phone.alt_text}
                 />
                 <a herf={data.wordpressAcfPages.acf.phone_number}>
@@ -61,7 +85,7 @@ const InoContact = () => (
               </li>
               <li className="ui-mail">
                 <img
-                  src={data.wordpressAcfPages.acf.icon_email.source_url}
+                  src={data.wordpressAcfPages.acf.icon_email.localFile.childImageSharp.sizes.src}
                   alt={data.wordpressAcfPages.acf.icon_email.alt_text}
                 />
                 <a herf={data.wordpressAcfPages.acf.email_contact}>

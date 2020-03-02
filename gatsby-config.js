@@ -15,11 +15,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-marketing-platform',
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        tagmanager: {
-          id: 'GTM-PFVC4B6'
-        },
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-159342285-1",
+        head: true,
       },
     },
     `gatsby-plugin-transition-link`,

@@ -2675,6 +2675,11 @@ button.close {
 
 
 }
+.hide-text{
+  color: white;
+  font-size: 0;
+
+}
 
 @media (min-width:992px) {
   .navbar-expand-lg {
@@ -2749,6 +2754,11 @@ button.close {
     background-repeat: no-repeat;
   }
 
+  .social-slider a{
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+  }
   .social-slider .ui-instagram {
 
     background-size: cover;
@@ -3000,4 +3010,56 @@ box-shadow: 0 14.6px 17.8px rgba(229, 242, 251, 0.25), 0 0px 92px rgba(142, 151,
 }
 .info-social.has-color .smt {
   background-color: #c0181f;
+}
+._404{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+flex-direction: column;
+}
+
+._404 h1{
+  font-family: 'Rubik';
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  font-style: normal;
+}
+._404 h2{
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-style: normal;
+  color: #c0181f;
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
+}
+._404 p{
+  font-family: 'Raleway';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  margin: 0;   
+  margin-bottom: 30px;
+   color: #595959;
+
+}
+._404 a{
+  display: block;
+  text-decoration: none;
+  background:#c0181f;
+  font-family: 'Raleway';
+  font-weight: normal;
+  color: white;
+  padding: 12px 30px;
+  font-size: 17px;
+  transition: all .3 ease-in-out;
+  border:#c0181f solid 1px;
+}
+._404 a:hover{
+ 
+  background:white;
+  color: #c0181f;
+  border:#c0181f solid 1px;
 }

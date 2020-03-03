@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import Fade from "react-reveal/Fade";
+
 const TitleClients = () => (
   <StaticQuery
     query={graphql`
@@ -16,16 +16,15 @@ const TitleClients = () => (
     render={data => (
       <div className="co-sm-12 p0 col-lg-10">
         <div className="se-Partenaires_header">
-          <Fade bottom>
+        
             <h2 className="se_Partenaires_title">
               {data.wordpressAcfPages.acf.title_clients}
             </h2>
-          </Fade>
-          <Fade bottom>
+   
             <div className="se_Partenaires_excerpt">
               <p>{data.wordpressAcfPages.acf.sub_title_partenaires}</p>
             </div>
-          </Fade>
+      
         </div>
       </div>
     )}

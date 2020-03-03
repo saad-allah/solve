@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import { withPrefix } from "gatsby";
-import Fade from "react-reveal/Fade";
+
 const SimpleSlider = () => (
   <StaticQuery
     query={graphql`
@@ -32,7 +32,7 @@ const SimpleSlider = () => (
     render={data => (
       <div className="col-12">
         <div className="slider-rotate" id="slider-2">
-          <Fade bottom>
+          
             <div className="slider-rotate__container">
               {data.wordpressAcfPages.acf.slider_expertises.map((item, i) => (
                 <div className="slider-rotate__item " key={i}>
@@ -50,7 +50,7 @@ const SimpleSlider = () => (
                 </div>
               ))}
             </div>
-          </Fade>
+        
         </div>
         <Helmet>
           <script async src={withPrefix("file.js")} />

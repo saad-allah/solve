@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import Fade from "react-reveal/Fade";
+
 const CertificationsContent = () => (
   <StaticQuery
     query={graphql`
@@ -22,7 +22,7 @@ const CertificationsContent = () => (
     render={data => (
       <div className="col-12">
         {data.wordpressAcfPages.acf.certifications.map(item => (
-          <Fade bottom>
+          
             <div
               className="row se-bg-white "
               key={item.certifications_image.slug}
@@ -41,7 +41,7 @@ const CertificationsContent = () => (
                 </div>
               </div>
             </div>
-          </Fade>
+        
         ))}
       </div>
     )}

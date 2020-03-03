@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import Fade from "react-reveal/Fade";
+
 const TitleNosvaleur = () => (
   <StaticQuery
     query={graphql`
@@ -22,13 +22,13 @@ const TitleNosvaleur = () => (
           <div className="row justify-content-center">
             <div className="col-sm-12 p0 col-lg-10">
               <div className="se-card se_header no-bg se-v">
-                <Fade bottom>
+                
                   <h2 className="se_title">
                     {data.wordpressAcfPages.acf.title_valeurs}
                   </h2>
-                </Fade>
+                
                 <div className="se-video">
-                  <Fade bottom>
+                  
                     <video autoPlay muted>
                       <source
                         src={
@@ -38,16 +38,16 @@ const TitleNosvaleur = () => (
                       />
                       Your browser does not support HTML5 video.
                     </video>
-                  </Fade>
+                  
                 </div>
-                <Fade bottom>
+                
                   <div
                     className="se_excerpt"
                     dangerouslySetInnerHTML={{
                       __html: data.wordpressAcfPages.acf.content_valeurs
                     }}
                   />
-                </Fade>
+                
               </div>
             </div>
           </div>

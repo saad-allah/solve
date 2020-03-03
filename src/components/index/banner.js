@@ -2,7 +2,7 @@ import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import Img from "gatsby-image";
 import MediaTop from "../SocialmediaHead";
-import Fade from "react-reveal/Fade";
+
 const Banner = () => (
   <StaticQuery
     query={graphql`
@@ -67,14 +67,14 @@ const Banner = () => (
             <div className="row">
               <div className="col-sm-12 col-lg-8 ">
                 <div className="text-banner">
-                  <Fade bottom>
+                
                     <h1
                       className="title-banner"
                       dangerouslySetInnerHTML={{
                         __html: data.wordpressAcfPages.acf.title_banner
                       }}
                     />
-                  </Fade>
+                
                 </div>
               </div>
             </div>

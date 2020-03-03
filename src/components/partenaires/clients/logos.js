@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import Fade from "react-reveal/Fade";
+
 const LogosClients = () => (
   <StaticQuery
     query={graphql`
@@ -22,7 +22,7 @@ const LogosClients = () => (
       <div className="col-12">
         <div className="se_clients_excerpt row justify-content-center">
           {data.wordpressAcfPages.acf.clients_logos.map(item => (
-            <Fade bottom>
+            
               <div className="col-6 col-lg-3 " key={item.logo.slug}>
                 <div className="se-clients">
                   <img
@@ -32,7 +32,7 @@ const LogosClients = () => (
                   />
                 </div>
               </div>
-            </Fade>
+         
           ))}
         </div>
       </div>

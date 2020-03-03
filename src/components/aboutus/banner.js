@@ -2,6 +2,7 @@ import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import Img from "gatsby-image";
 import MediaTop from "../SocialmediaHead";
+import Fade from "react-reveal/Fade";
 const Banner = () => (
   <StaticQuery
     query={graphql`
@@ -30,21 +31,30 @@ const Banner = () => (
         <div className="social-slider">
           <MediaTop />
         </div>
-        <div
-          className="se-banner-single" >
-           <Img src={data.wordpressAcfPages.acf.image_banner_page.localFile.childImageSharp.sizes.src}
-                sizes={data.wordpressAcfPages.acf.image_banner_page.localFile.childImageSharp.sizes} />
+        <div className="se-banner-single">
+          <Img
+            src={
+              data.wordpressAcfPages.acf.image_banner_page.localFile
+                .childImageSharp.sizes.src
+            }
+            sizes={
+              data.wordpressAcfPages.acf.image_banner_page.localFile
+                .childImageSharp.sizes
+            }
+          />
         </div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-sm-12 col-lg-6 ">
               <div className="text-banner-single">
-                <h1
-                  className="title-banner-single"
-                  dangerouslySetInnerHTML={{
-                    __html: data.wordpressAcfPages.acf.title_banner_page
-                  }}
-                />
+                <Fade bottom>
+                  <h1
+                    className="title-banner-single"
+                    dangerouslySetInnerHTML={{
+                      __html: data.wordpressAcfPages.acf.title_banner_page
+                    }}
+                  />
+                </Fade>
               </div>
             </div>
           </div>

@@ -1,18 +1,21 @@
-import React from "react"
+import React from "react";
 import { graphql } from "gatsby";
-import Banner from "../components/aboutus/banner"
-import QuiSommeNous from "../components/aboutus/quiSommeNous"
-import NotreHistoire from "../components/aboutus/notreHistoire"
-import ExperienceInternationale from "../components/aboutus/experienceInternationale"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
+import Banner from "../components/aboutus/banner";
+import QuiSommeNous from "../components/aboutus/quiSommeNous";
+import NotreHistoire from "../components/aboutus/notreHistoire";
+import ExperienceInternationale from "../components/aboutus/experienceInternationale";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 export default ({ data }) => {
-  console.log(data);
   return (
     <Layout>
-      <SEO title={data.wordpressPage.yoast_title} description={data.wordpressPage.yoast_json_ld[0].wordpress__graph[1].description}/>
+      <SEO
+        title={data.wordpressPage.yoast_title}
+        description={
+          data.wordpressPage.yoast_json_ld[0].wordpress__graph[1].description
+        }
+      />
       <Banner />
       <QuiSommeNous />
       <NotreHistoire />
@@ -22,7 +25,7 @@ export default ({ data }) => {
 };
 export const pageQuery = graphql`
   query {
-    wordpressPage(wordpress_id: { eq: 2 }) {
+    wordpressPage(wordpress_id: { eq: 43 }) {
       yoast_title
       yoast_json_ld {
         wordpress__graph {
@@ -33,4 +36,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-

@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import TitleCertifications from "./certifications/title";
 import CertificationsContent from "./certifications/allcertifications";
 
@@ -11,6 +11,6 @@ const Certification = () => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Certification
+export default Certification;

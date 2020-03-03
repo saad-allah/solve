@@ -1,4 +1,3 @@
-
 import React from "react";
 import TitleClients from "./clients/title";
 import LogoClients from "./clients/logos";
@@ -12,6 +11,6 @@ const Client = () => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Client
+export default Client;

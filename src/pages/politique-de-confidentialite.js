@@ -18,7 +18,7 @@ export default ({ data }) => {
 }
 export const pageQuery = graphql`
   query {
-    wordpressPage(wordpress_id: { eq: 2 }) {
+    wordpressPage(wordpress_id: { eq: 199 }) {
       yoast_title
       yoast_json_ld {
         wordpress__graph {

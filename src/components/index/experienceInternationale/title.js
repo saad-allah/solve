@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-
+import Fade from "react-reveal/Fade";
 const TitleExpInt = () => (
   <StaticQuery
     query={graphql`
@@ -15,10 +15,16 @@ const TitleExpInt = () => (
     `}
     render={data => (
       <div className="se-exp_header">
-        <h2 className="se_map_title">{data.wordpressAcfPages.acf.title_ei}</h2>
-        <div className="se_map_excerpt">
-          <p>{data.wordpressAcfPages.acf.paragraphe_ai}</p>
-        </div>
+        <Fade bottom>
+          <h2 className="se_map_title">
+            {data.wordpressAcfPages.acf.title_ei}
+          </h2>
+        </Fade>
+        <Fade bottom>
+          <div className="se_map_excerpt">
+            <p>{data.wordpressAcfPages.acf.paragraphe_ai}</p>
+          </div>
+        </Fade>
       </div>
     )}
   />
